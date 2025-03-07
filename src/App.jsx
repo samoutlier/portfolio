@@ -1,12 +1,13 @@
 import './App.css'
 import "./index.css"
 import { LoadingScreen } from './components/LoadingScreen'
-import { Navbar } from './components/LoadingScreen'
+import { Navbar } from './components/Navbar'
 import { useState } from 'react'
 
 function App() {
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMmenuOpen, setIsMmenuOpen] = useState(false);
 
   return (
     <>
