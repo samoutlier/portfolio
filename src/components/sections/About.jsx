@@ -38,17 +38,55 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4">🎓  Education</h3>
-          </div>
+
+        <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
+          <h3 className="text-xl font-bold mb-4">🎓  Education</h3>
+          <ul className="list-disc list-inside text-gray-300 space-y-4">
+            <li>
+              <strong>
+                B.Tech in Electronics & Communication Engineering
+              </strong> - Jamia Millia Islamia, New Delhi (2020-2024)
+            </li>
+            <li>
+              Relevant Coursework : Data Structures & Algorithms, OOPS, Computer Networks, DBMS
+            </li>
+          </ul>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4">📟 Coding Profiles</h3>
-          </div>
+        <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 transition-all">
+          <h3 className="text-xl font-bold mb-4">📟 Coding Profiles</h3>
+          <li className="text-xl">
+            <a
+              href="https://www.leetcode.com/"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LeetCode
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.geeksforgeeks.com/"
+              className="text-xl text-blue-400 hover:text-blue-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GeeksForGeeks
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.codechef.com/"
+              className="text-xl text-blue-400 hover:text-blue-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CodeChef
+            </a>
+          </li>
         </div>
+
 
       </div>
 
