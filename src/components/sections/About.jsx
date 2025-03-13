@@ -61,7 +61,7 @@ export const About = () => {
             <h3 className="text-xl font-bold mb-4">📟 Coding Profiles</h3>
             <li className="text-xl">
               <a
-                href="https://www.leetcode.com/"
+                href="https://leetcode.com/u/Khwaja_Abdul_Samad/"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export const About = () => {
             </li>
             <li>
               <a
-                href="https://www.geeksforgeeks.com/"
+                href="https://www.geeksforgeeks.org/user/thatsme104/"
                 className="text-xl text-blue-400 hover:text-blue-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export const About = () => {
             </li>
             <li>
               <a
-                href="https://www.codechef.com/"
+                href="https://www.codechef.com/users/sam_outlier"
                 className="text-xl text-blue-400 hover:text-blue-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
