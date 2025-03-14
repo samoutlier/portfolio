@@ -11,22 +11,29 @@ export const Contact = () => {
     message: "",
   })
 
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs.sendForm(
-      import.meta.env.VITE_SERVICE_ID, 
-      import.meta.env.VITE_TEMPLATE_ID, 
-      e.target, 
-      import.meta.env.VITE_PUBLIC_KEY).then((result) => {
-      alert("Message Sent╰(*°▽°*)╯");
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_PUBLIC_KEY
+    ).then(() => {
+      alert("Message Sent ╰(*°▽°*)╯");
       setFormData({ name: "", email: "", message: "" });
       e.target.reset();
     }).catch(() => {
       alert("Oops, something went wrong, please try again {{{(>_<)}}}");
-    })
+      setFormData({ name: "", email: "", message: "" });
+    }).finally(() => {
+      setIsLoading(false);
+    });
   };
+
 
   return <section
     id="contact"
@@ -82,8 +89,17 @@ export const Contact = () => {
             />
           </div>
 
-          <button type="submit" className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-            Submit
+          <button type="submit"
+            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden 
+             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] 
+             cursor-pointer flex items-center justify-center gap-2"
+            disabled={isLoading} // ✅ Disable button while loading
+          >
+            {isLoading ? (
+              <>
+                <span className="loader"></span> Sending...
+              </>
+            ) : "Submit"}
           </button>
 
         </form>
