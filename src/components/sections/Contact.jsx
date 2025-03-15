@@ -23,11 +23,11 @@ export const Contact = () => {
       e.target,
       import.meta.env.VITE_PUBLIC_KEY
     ).then(() => {
-      alert("Message Sent ╰(*°▽°*)╯");
+      alert("Message Sent!! ^_^ ");
       setFormData({ name: "", email: "", message: "" });
       e.target.reset();
     }).catch(() => {
-      alert("Oops, something went wrong, please try again {{{(>_<)}}}");
+      alert("Oops, something went wrong, please try again >_<");
       setFormData({ name: "", email: "", message: "" });
     }).finally(() => {
       setIsLoading(false);
