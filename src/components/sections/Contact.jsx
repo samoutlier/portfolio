@@ -107,7 +107,7 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className={`w-full text-white py-3 px-6 rounded font-medium transition relative overflow-hidden flex items-center justify-center gap-2 
+              className={`w-full text-white py-3 px-6 rounded font-medium transition relative overflow-hidden flex items-center justify-center gap-2 hover:cursor-pointer
                 ${isSubmitted ? "bg-green-600" : isError ? "bg-red-500" : "bg-blue-500 hover:bg-blue-600"} 
                 ${isLoading ? "pointer-events-none" : ""}`}
               disabled={isLoading}
